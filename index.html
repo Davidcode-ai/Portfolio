@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!---------------NAVBAR--------------->
+    <input type="checkbox" class="sidebar__checkbox" id="checkbox">
+    <div class="sidebar">
+        <label for="checkbox"><span class="material-symbols-outlined sidebar__close">Close</span></label>
+        <div class="sidebar__topline"></div>
+        <div class="sidebar__logo">DM</div>
+        <nav class="sidebar__nav">
+            <a href="index.html"><span class="material-symbols-outlined">Person</span>About me</a>
+            <a href="#port"><span class="material-symbols-outlined">Attach_File</span>Portfolio</a>
+            <a href="#contact"><span class="material-symbols-outlined">Mail</span>Contact</a>
+        </nav>
+    </div>
+    <div id="div__open-menu"><label for="checkbox"><span class="material-symbols-outlined open-menu">Menu</span></label></div>
+    <!---------------LANDING PAGE--------------->
+    <header class="header" id="header">
+        <div class="header__container__text">
+            <h2 class="header__title">Hi, my name is David</h2>
+            <p class="header__text">I'm an 19 year old web developer starting out in this world</p>
+            <div class="container__button">
+                <a class="header__button" href="#">Download CV</a>
+            </div>
+            
+        </div>
+        <div class="header__container__img">
+            <img class="header__img" src="marc.png" alt="Marc Marquez">
+        </div>
+    </header>
+    <!--------------SKILLS SECTION-------------->
+    <section class="skill">
+        <div class="skill__title__container"><h2 class="skill__title">MY SKILLS</h2></div>
+        <div class="skill__content">
+            <div class="skill__bar">
+                <div class="bar__content">
+                    <div class="bar__80 html__bar">80%</div>
+                </div>
+                <h2 class="html__text">HTML</h2>
+            </div>
+            <div class="skill__bar">
+                <div class="bar__content">
+                    <div class="bar__70 css__bar">70%</div>
+                </div>
+                <h2 class="css__text">CSS</h2>
+            </div>
+            <div class="skill__bar">
+                <div class="bar__content">
+                    <div class="bar__25 js__bar">25%</div>
+                </div>
+                <h2 class="js__text">JS</h2>
+            </div>
+            <div class="skill__bar">
+                <div class="bar__content">
+                    <div class="bar__20 angular__bar">20%</div>
+                </div>
+                <h2 class="angular__text">Angular</h2>
+            </div>
+        </div>
+    </section>
+    <!---------------PROYECTS SECTION--------------->
+    <div id="port">
+        <div class="container__card">
+            <h1>Z900</h1>
+            <img src="z900.png" alt="Moto Kawasaki z900" id="z900">
+            <input type="checkbox" id="open__menu1">
+            <label class="proyects" for="open__menu1">Sobre la moto</label>
+            <div class="card__ext">
+                <h3>The Kawasaki Z900 is a standard motorcycle of the Kawasaki Z series made by Kawasaki since 2017. It replaced the Z800.[1] It is the flagship Z series motorcycle besides the ZH2 from Kawasaki.</h3>
+            </div>
+        </div>
+        <div class="container__card">
+            <h1>Z900</h1>
+            <img src="z900.png" alt="Moto Kawasaki z900" id="z900">
+            <input type="checkbox" id="open__menu2">
+            <label class="proyects" for="open__menu2">Sobre la moto</label>
+            <div class="card__ext">
+                <h3>The Kawasaki Z900 is a standard motorcycle of the Kawasaki Z series made by Kawasaki since 2017. It replaced the Z800.[1] It is the flagship Z series motorcycle besides the ZH2 from Kawasaki.</h3>
+            </div>
+        </div>
+        <div class="container__card">
+            <h1>Z900</h1>
+            <img src="z900.png" alt="Moto Kawasaki z900" id="z900">
+            <input type="checkbox" id="open__menu3">
+            <label class="proyects" for="open__menu3">Sobre la moto</label>
+            <div class="card__ext">
+                <h3>The Kawasaki Z900 is a standard motorcycle of the Kawasaki Z series made by Kawasaki since 2017. It replaced the Z800.[1] It is the flagship Z series motorcycle besides the ZH2 from Kawasaki.</h3>
+            </div>
+        </div>
+    </div>
+    <!-------------CONTACT SECTION--------------->
+    <section class="form" id="contact">
+        <h2 class="form__title">CONTACT</h2>
+        <form class="form__form">
+            <div class="form__input-container">
+                <label>Nombre
+                    <input type="text" placeholder="Jhon">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Apellido
+                    <input type="text" placeholder="Doe">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>E-mail
+                    <input type="email" placeholder="mail@example.com">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Mensaje
+                    <textarea placeholder="Your message"></textarea>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>
+                    <input type="submit">
+                </label>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <strong>David</strong> - Copyright 2030
+    </footer>
+</body>
+</html>
