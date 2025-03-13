@@ -1,0 +1,515 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --bg-color: #111d13;
+    --text-color: #a1cca5;
+    --link-color: #415d43;
+    --link2-color: #8fb996;
+    color: var(--text-color);
+}
+
+/* STYLES NAVBAR FOR MOBILE */
+
+.sidebar {
+    height: 100dvh;
+    border-radius: 0 30px 30px 0;
+    background-color: #9af;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    margin-top: -100vh;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 2px 0 10px 0px #0004;
+    z-index: 1000;
+}
+
+.sidebar__checkbox {
+    display: none;
+}
+
+.sidebar__close {
+    position: absolute;
+    padding: 10px;
+    top: .5%;
+    right: 3%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.sidebar__close:hover {
+    background-color: #0002;
+    border-radius: 100%;
+}
+
+#div__open-menu {
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin-top: -5vh;
+}
+
+.open-menu {
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    transition: .5s;
+}
+
+
+.sidebar__topline {
+    width: 100%;
+    height: 4.5%;
+    min-height: 2.5rem;
+    background-color: azure;
+    position: absolute;
+    top: 0px;
+    border-radius: 0px 30px 0px 0px;
+}
+
+.sidebar__logo {
+    position: absolute;
+    font-size: 0px;
+    font-weight: 700;
+    color: #116;
+    margin-top: 40px;
+    transition: .5s;
+}
+
+.sidebar__logo::first-letter {
+    color: #000;
+}
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 100%;
+    opacity: 0;
+    transition: .1s;
+    margin-bottom: 20px;
+}
+
+.sidebar__nav a, .sidebar__nav span {
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    font-size: clamp(1rem, 3.5vw, 3rem);
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar__nav a:hover {
+    background-color: #0002;
+    border-left: 15px solid #000;
+    transition: .4s;
+}
+
+/*---------STYLES CHECKBOX CHECKED-----------*/
+
+.sidebar__checkbox:checked ~ .sidebar {
+    width: clamp(12rem, 30dvw, 25rem);
+    visibility: visible;
+    opacity: 1;
+    transition: .5s;
+}
+
+.sidebar__checkbox:checked ~ .sidebar .sidebar__logo {
+    font-size: clamp(5rem, 8vw, 8rem);
+}
+
+.sidebar__checkbox:checked ~ .sidebar .sidebar__nav { 
+    opacity: 1;
+}
+
+.sidebar__checkbox:checked ~ * .open-menu { 
+    opacity: 0;
+}
+
+/* STYLES HEADER FOR MOBILE*/
+
+.header {
+    width: 100dvw;
+    max-width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.header__container__text {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 3rem;
+    text-wrap: pretty;
+}
+
+.header__text {
+    font-size: 1.5rem;
+    text-wrap: pretty;
+}
+
+.container__button {
+    width: 20rem;
+    height: 2rem;
+    margin: 10px 0 30px 0;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__button {
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid var(--link-color);
+    background-color: #8fb996;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.header__button:hover {
+    height: 70%;
+    width: 40%;
+    font-size: .8rem;
+    opacity: .7;
+    transition: .5s;
+}
+
+.header__container__img {
+    display: flex;
+    align-items: center;
+}
+
+.header__img {
+    height: 100%;
+    box-shadow: 0 0 15px 0 #fff7;
+}
+
+/*--------------SKILLS STYLES---------------*/
+
+.skill {
+    width: 100%;
+    height: fit-content;
+    min-height: 40dvh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill__title__container {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill__title {
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 700;
+}
+
+.skill__content {
+    width: 100%;
+    height: 100dvh;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+/*-------------BAR STYLES----------------*/
+
+.skill__bar {
+    width: 70%;
+    height: 60px;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar__content {
+    width: 80%;
+    min-width: 70%;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+/*---------ESPECIFIC BAR STYLES-----------*/
+/*---------------HTML STYLES--------------*/
+.bar__80 {
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.html__bar {
+    background-color: #f16529;
+    font-weight: 700;
+    color: #fff;
+}
+
+.html__text {
+    color: #f16529;
+    margin-left: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+/*---------------HTML STYLES--------------*/
+.bar__70 {
+    background-color: #fff;
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.css__bar {
+    background-color: #2965f1;
+    font-weight: 700;
+    color: #fff;
+}
+
+.css__text {
+    color: #2965f1;
+    margin-left: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+/*---------------JS STYLES--------------*/
+
+.bar__25 {
+    background-color: #fff;
+    width: 25%;
+    height: 100%;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.js__bar {
+    background-color: #f0db4f;
+    font-weight: 700;
+    color: #fff;
+}
+
+.js__text {
+    color: #f0db4f;
+    margin-left: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+/*---------------ANGULAR STYLES--------------*/
+
+.bar__20 {
+    background-color: #fff;
+    width: 20%;
+    height: 100%;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.angular__bar {
+    background-color: #c3002f;
+    font-weight: 700;
+    color: #fff;
+}
+
+.angular__text {
+    color: #c3002f;
+    margin-left: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+/*------------STYLES FOR PROYECTS-----------*/
+
+#port {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    padding-top: 20%;
+    padding-bottom: 14%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #111d13;
+    text-align: center;
+    gap: 30px;
+}
+
+#z900 {
+    width: 60%;
+}
+
+.container__card {
+    width: 90%;
+    background: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__ext {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 15px;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.proyects {
+    display: block;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.proyects:hover {
+    background: #0056b3;
+}
+
+input[type="checkbox"]:checked ~ .card__ext {
+    max-height: 300px;
+    opacity: 1;
+}
+/*---------------CONTACT SECTION--------------*/
+
+.form {
+    min-height: 83vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.form__form {
+    padding: 12px;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+    margin-bottom: 30px;
+}
+
+.form__input-container :is(input,textarea) {
+    width: 100%;
+    padding: 9px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #0003;
+    background-color: #fffd;
+}
+
+.form__input-container textarea {
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form__input-container input[type="submit"] {
+    padding: 12px;
+    background-color: #48e;
+    color: #fff;
+}
+
+.form__title {
+    font-size: 2.4rem;
+}
+
+
+/*---------------CONTACT QUERIES--------------*/
+
+@container form (min-width:56.25rem) {
+    .form__form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "name lastname"
+        "email email"
+        "message message"
+        "button button";
+        gap: 12px;
+        background-image: radial-gradient(#18233f06, #18233f33);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 40px #0006 ;
+    }
+
+    .form__input-container:first-child {
+        grid-area: name;
+    }
+    .form__input-container:nth-child(2) {
+        grid-area: lastname;
+    }
+    .form__input-container:nth-child(3) {
+        grid-area: email;
+    }
+    .form__input-container:nth-child(4) {
+        grid-area: message;
+    }
+    .form__input-container:nth-child(5) {
+        grid-area: button;
+    }
+
+    .form__input-container :is(input,textarea) {
+        box-shadow: none;
+        border-radius: 4px;
+    }
+}
+
+/*---------------CONTACT ENDS--------------*/
+
+/*---------------FOOTER SECTION--------------*/
+
+footer {
+    padding: 60px;
+    text-align: center;
+    background-color: #18233f;
+    color: #fffd;
+    font-size: 22px;
+}
